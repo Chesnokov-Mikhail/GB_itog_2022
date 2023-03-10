@@ -55,7 +55,7 @@ public abstract class PackAnimals extends Animals {
         return speed;
     }
 
-    public void runing(int speed) {
+    public void run_away(int speed) {
         this.speed = speed;
     }
 

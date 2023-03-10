@@ -3,16 +3,14 @@ package org.example;
 import java.util.Date;
 import java.util.Objects;
 
-public class Dogs extends HomeAnimals{
+public class Cats extends HomeAnimals {
     protected Float height;
-    private Integer speed=0;
-    private Boolean barkOn=false;
+    private Boolean mewOn=false;
     private Boolean sleepOn=false;
-    private Boolean sitOn=false;
     private Boolean eatOn=false;
     private Boolean lieDownOn=false;
 
-    public Dogs(String name, String bread, Float weight, Date dateBirth, String color, Float bodyLength, Float height) {
+    public Cats(String name, String bread, Float weight, Date dateBirth, String color, Float bodyLength, Float height) {
         super(name, bread, weight, dateBirth, color, bodyLength);
         this.height = height;
     }
@@ -21,21 +19,25 @@ public class Dogs extends HomeAnimals{
         return height;
     }
 
-    public Integer getSpeed() {
-        return speed;
+    public Boolean getMewOn() {
+        return mewOn;
     }
 
-    public void setSpeed(Integer speed) {
-        this.speed = speed;
+    public Boolean getSleepOn() {
+        return sleepOn;
     }
 
-    public void run_away(int speed) {
-        this.speed = speed;
+    public Boolean getEatOn() {
+        return eatOn;
     }
 
-    public boolean bark(){
-        if (!this.barkOn) {
-            this.barkOn=true;
+    public Boolean getLieDownOn() {
+        return lieDownOn;
+    }
+
+    public boolean mew(){
+        if (!this.mewOn) {
+            this.mewOn=true;
             return true;
         }
         return false;
@@ -48,13 +50,7 @@ public class Dogs extends HomeAnimals{
         }
         return false;
     }
-    public boolean sit(){
-        if (!this.sitOn) {
-            this.sitOn = true;
-            return true;
-        }
-        return false;
-    }
+
     public boolean eat(){
         if (!this.eatOn) {
             this.eatOn = true;
@@ -69,29 +65,10 @@ public class Dogs extends HomeAnimals{
         }
         return false;
     }
-    public Boolean getBarkOn() {
-        return barkOn;
-    }
-
-    public Boolean getSleepOn() {
-        return sleepOn;
-    }
-
-    public Boolean getSitOn() {
-        return sitOn;
-    }
-
-    public Boolean getEatOn() {
-        return eatOn;
-    }
-
-    public Boolean getLieDownOn() {
-        return lieDownOn;
-    }
 
     @Override
     public String toString() {
-        return "Dogs{" +
+        return "Cats{" +
                 "height=" + height +
                 ", bread='" + bread + '\'' +
                 ", weight=" + weight +
